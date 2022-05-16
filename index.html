@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akwarium</title>
+    <style>
+        body {
+            width: auto;
+            height: auto;
+            background-image: url(Dno.jpg);
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .fishA {
+            width: 200px;
+            height: 80px;
+            position: absolute;
+            right: -20vw;
+        }
+
+        .fishB {
+            width: 300px;
+            height: 140px;
+            position: absolute;
+            left: -20vw;
+        }
+
+        #crab {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: -30vw;
+            bottom: -15vh;
+            animation: crabMove 16s linear infinite alternate-reverse;
+        }
+
+        .bubble {
+            width: 35px;
+            height: auto;
+            position: absolute;
+            bottom: -4vh;
+            animation: bubbleSwim 5s ease-in infinite;
+        }
+
+        #topfish {
+            top: 10vh;
+            animation: swimA 10s 4s linear infinite, swimVarA 10s 4s ease infinite;
+        }
+
+        #middlefish {
+            top: 45vh;
+            animation: swimA 30s 10s cubic-bezier(.94, -0.08, .22, 1.07) infinite;
+        }
+
+        #bottomfish {
+            bottom: 20vh;
+            animation: swimA 16s 5s ease-out infinite, swimVarB 16s 5s linear infinite;
+        }
+
+        #topfishB {
+            top: 25vh;
+            animation: swimB 12s ease-out infinite, swimCarD 12s linear infinite;
+        }
+
+        #middlefishB {
+            width: 400px;
+            height: 170px;
+            top: 40vh;
+            left:-30vw;
+            animation: swimC 16s 8s ease-out infinite;
+        }
+
+        #bottomfishB {
+            bottom: 25vh;
+            animation: swimB 16s ease-out infinite, swimVarC 16s linear infinite;
+        }
+
+        #bubbleA {
+            left: 10vw;
+            animation: bubbleSwim 7s 5s infinite cubic-bezier(.94, -0.08, .22, 1.07);
+        }
+
+        #bubbleB {
+            left: 30vw;
+            animation: bubbleSwim 9s 2s infinite cubic-bezier(.94, -0.08, .22, 1.07);
+        }
+
+        #bubbleC {
+            left: 90vw;
+            animation: bubbleSwim 8s 3s infinite cubic-bezier(.94, -0.08, .22, 1.07);
+        }
+
+        #bubbleD {
+            left: 50vw;
+            animation: bubbleSwim 12s 9s infinite cubic-bezier(.94, -0.08, .22, 1.07);
+        }
+
+        #bubbleE {
+            left: 70vw;
+            animation: bubbleSwim 11s 6s infinite cubic-bezier(.94, -0.08, .22, 1.07);
+        }
+
+        #bubbleF {
+            left: 25%vw
+            animation: bubbleSwim 10s 7s infinite cubic-bezier(.94, -0.08, .22, 1.07);
+        }
+
+        @keyframes swimA {
+            from {
+                right: -20vw
+            }
+
+            to {
+                right: 120vw
+            }
+        }
+
+        @keyframes swimB {
+            from {
+                left: -20vw
+            }
+
+            to {
+                left: 120vw
+            }
+        }
+
+        @keyframes swimC {
+            0% {left: -30vw}
+            70% {left: 50vw}
+            75% {left: 50vw}
+            100% {left: 120vw}
+        }
+
+        @keyframes swimVarA {
+            0% {
+                top: 10vh
+            }
+
+            50% {
+                top: 80vh
+            }
+
+            100% {
+                top: 60vh
+            }
+        }
+
+        @keyframes swimVarB {
+            0% {
+                bottom: 20vh
+            }
+
+            50% {
+                bottom: 75vh
+            }
+
+            100% {
+                bottom: 100vh
+            }
+        }
+
+        @keyframes swimVarC {
+            0% {
+                top: 30vh
+            }
+
+            50% {
+                top: 80vh
+            }
+
+            75% {
+                top: 70vh
+            }
+
+            100% {
+                top: 50vh 
+            }
+        }
+
+        @keyframes swimVarD {
+            0% {top: 25vh}
+            50% {top: 5vh}
+            100% {top: 10vh}
+        }
+
+        
+
+        @keyframes bubbleSwim {
+            from {
+                bottom: -4vh
+            }
+
+            to {
+                bottom: 110vh
+            }
+        }
+
+        @keyframes crabMove {
+            from {left: -30vw}
+            to {left: 50vw}
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Rybka 1.png" alt="Złota Rybka" class="fishA" id="topfish">
+    <img src="Rybka 1.png" alt="Złota Rybka" class="fishA" id="middlefish">
+    <img src="Rybka 1.png" alt="Złota Rybka" class="fishA" id="bottomfish">
+    <img src="Rybka 2.png" alt="Czerwoona Rybka" class="fishB" id="topfishB">
+    <img src="Rybka 2.png" alt="Czerwoona Rybka" class="fishB" id="middlefishB">
+    <img src="Rybka 2.png" alt="Czerwoona Rybka" class="fishB" id="bottomfishB">
+    <img src="Crab.gif" alt="Krab" id="crab">
+    <img src="bubble.png" alt="bańka" class="bubble" id="bubbleA">
+    <img src="bubble.png" alt="bańka" class="bubble" id="bubbleB">
+    <img src="bubble.png" alt="bańka" class="bubble" id="bubbleC">
+    <img src="bubble.png" alt="bańka" class="bubble" id="bubbleD">
+    <img src="bubble.png" alt="bańka" class="bubble" id="bubbleE">
+    <img src="bubble.png" alt="bańka" class="bubble" id="bubbleF">
+
+</html>
